@@ -1,0 +1,81 @@
+
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Portal Berita Saya"
+theme = "PaperMod"
+
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = true
+
+  [params.assets]
+    disableHLJS = true
+
+  [params.label]
+    text = "Home"
+    icon = "/apple-touch-icon.png"
+    iconHeight = 35
+
+  # profile-mode
+  [params.profileMode]
+    enabled = false # needs to be explicitly set
+
+  # home-info mode
+  [params.homeInfoParams]
+    Title = "Hi there 👋"
+    Content = "Welcome to my news portal."
+
+  [params.socialIcons]
+    # Add your social media links here
+
+  [params.analytics]
+    # Google Analytics configuration
+
+  [params.cover]
+    hidden = true # hide on all pages
+    hiddenInList = true # hide on list pages
+    hiddenInSingle = true # hide on single page
+
+  [params.editPost]
+    URL = ""
+    Text = "Suggest Changes"
+    appendFilePath = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "tos"
+    name = "TOS"
+    url = "/tos/"
+    weight = 10
+  [[menu.main]]
+    identifier = "disclaimer"
+    name = "Disclaimer"
+    url = "/disclaimer/"
+    weight = 20
+
+# Enable TOC for posts
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# Multi-author configuration
+[taxonomies]
+  author = "authors"
